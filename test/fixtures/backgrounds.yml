@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  features: MyString
+  equipment: MyString
+  personality: MyString
+  ideals: MyString
+  bonds: MyString
+  flaws: MyString
+  age: 1
+  size: MyString
+
+two:
+  features: MyString
+  equipment: MyString
+  personality: MyString
+  ideals: MyString
+  bonds: MyString
+  flaws: MyString
+  age: 1
+  size: MyString
