@@ -18,9 +18,10 @@ skill_hashes = JSON.parse(skill_file)
 spell_hashes = JSON.parse(spell_file)
 feature_hashes = JSON.parse(feature_file)
 
-
-
-
+Job.make_all_jobs
+Race.make_all_races
+Skill.make_all_skills
+Spell.make_all_spells
 
 
 
