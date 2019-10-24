@@ -2,7 +2,7 @@
 
 <div>
 <h3>Gender: <%= @character.gender%> </h3>
-<h3>Race: <%=@race.name%></h3>
+<h3>Race: <%=link_to @race.name, race_path(@race)%></h3>
 <h3>Class: <%=@job.name%></h3>
 <h3>Intelligence: <%= @character.int%></h3>
 <h3>Strength: <%= @character.str%></h3>
