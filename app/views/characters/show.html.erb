@@ -25,6 +25,9 @@
 <%@character.spells.each do |spell|%>
 <h3><%= link_to spell.name, spell_path(spell)%></h3><br>
 <%end%>
+<%@character.skills.each do |skill|%>
+<h3><%= link_to skill.name, skill_path(skill)%></h3><br>
+<%end%>
 </div>
 
 

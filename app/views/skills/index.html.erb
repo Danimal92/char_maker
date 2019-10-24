@@ -1,2 +1,4 @@
-<h1>Skills#index</h1>
-<p>Find me in app/views/skills/index.html.erb</p>
+<h1>Skills</h1>
+<h2><%@skills.each do |skill|%></h2>
+<h3><%=link_to skill.name, skill_path(skill)%></h3>
+<%end%>
