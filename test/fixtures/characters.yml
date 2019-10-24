@@ -1,41 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  int: 1
-  str: 1
-  dex: 1
-  wis: 1
-  cha: 1
-  con: 1
-  int_mod: 1
-  str_mod: 1
-  dex_mod: 1
-  wis_mod: 1
-  cha_mod: 1
-  con_mod: 1
-  hp: 1
-  equipment: MyText
-  ac: 1
-  alignment: MyString
-  size: MyString
-  languages: MyString
-
-two:
-  int: 1
-  str: 1
-  dex: 1
-  wis: 1
-  cha: 1
-  con: 1
-  int_mod: 1
-  str_mod: 1
-  dex_mod: 1
-  wis_mod: 1
-  cha_mod: 1
-  con_mod: 1
-  hp: 1
-  equipment: MyText
-  ac: 1
-  alignment: MyString
-  size: MyString
-  languages: MyString
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+# column: value

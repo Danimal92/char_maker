@@ -1,14 +1,14 @@
 class Character < ApplicationRecord
+
+
     belongs_to :user
     belongs_to :race
     belongs_to :background
-    belongs_to :class
+    belongs_to :job
     has_many :character_spells
     has_many :spells, through: :character_spells
     has_many :character_skills
     has_many :skills, through: :character_skills
 
-    def self.new
-        puts "thing"
-    end
+    
 end

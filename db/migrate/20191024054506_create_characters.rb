@@ -28,7 +28,7 @@ class CreateCharacters < ActiveRecord::Migration[6.0]
       t.integer :race_id
       t.integer :job_id
       t.integer :background_id
-      
+
       t.timestamps
     end
   end

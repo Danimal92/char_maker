@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_23_000000) do
+ActiveRecord::Schema.define(version: 2019_10_24_054506) do
 
   create_table "backgrounds", force: :cascade do |t|
     t.string "personality"
