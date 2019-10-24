@@ -1,8 +1,0 @@
-<h1>Please choose from the following: </h1>
-<%= form_for(Character.new) do |f| %>
-  <%= f.label :name%>
-  <%= f.text_field :name%>
-  <%= f.collection_select :race_id, Race.all, :id, :name %>
-  <%= f.collection_select :job_id, Job.all, :id, :name %>
-  <%= f.submit %>
-<% end %>

@@ -1,5 +1,0 @@
-<h1>Jobs</h1>
-<%=form_for(@job) do |f|%>
-<%= f.collection_select :job_id, Job.all, :id, :name %>
-<%= f.submit%>
-<% end%>

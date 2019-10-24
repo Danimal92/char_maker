@@ -1,0 +1,11 @@
+<h1>Please choose from the following: </h1>
+  <%= form_for(@character) do |f| %>
+  <%= f.label :name%>
+  <%= f.text_field :name%>
+  <%= f.label :gender%>
+  <%= f.select :gender, [['male'], ['female']]%>
+  <%= f.select :alignment, ['Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'True Neutral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil']%>
+  <%= f.collection_select :race_id, Race.all, :id, :name %>
+  <%= f.collection_select :job_id, Job.all, :id, :name %>
+  <%= f.submit %>
+<% end %>
