@@ -1,51 +1,44 @@
-<h1><%= @character.name%></h1>
+<h1>Name: <%= @character.name%></h1>
 
-    <%= form_for(@character) do |f| %>
-    <%=  f.label :name%>
-    <%=  f.text_field :name%>
-    <%=  f.label :gender%>
-    <%=  f.select :gender, [['male'], ['female']]%>
-    <%=  f.label :int%>
-    <%=  f.number_field :int%>
-    <%=  f.label :str%>
-    <%=  f.number_field :str%>
-    <%=  f.label :dex%>
-    <%=  f.number_field :dex%>
-    <%=  f.label :wis%>
-    <%=  f.number_field :wis%>
-    <%=  f.label :cha%>
-    <%=  f.number_field :cha%>
-    <%=  f.label :con%>
-    <%=  f.number_field :con%>
-    <%=  f.label :int_mod%>
-    <%=  f.number_field :int_mod%>
-    <%=  f.label :str_mod%>
-    <%=  f.number_field :str_mod%>
-    <%=  f.label :dex_mod%>
-    <%=  f.number_field :dex_mod%>
-    <%=  f.label :wis_mod%>
-    <%=  f.number_field :wis_mod%>
-    <%=  f.label :cha_mod%>
-    <%=  f.number_field :cha_mod%>
-    <%=  f.label :con_mod%>
-    <%=  f.number_field :con_mod%>
-    <%=  f.label :hp%>
-    <%=  f.number_field :hp%>
-    <%=  f.label :equipment%>
-    <%=  f.text_field :equipment%>
-    <%=  f.label :ac%>
-    <%=  f.number_field :ac%>
-    <%=  f.label :alignment%>
-    <%=  f.text_field :alignment%>
-    <%=  f.label :size%>
-    <%=  f.text_field :size%>
-    <%=  f.label :languages%>
-    <%=  f.text_field :languages%>
-    <%=  f.label :saving_throws%>
-    <%=  f.text :saving_throws%>
-    <%=  f.label :initiative%>
-    <%=  f.number_field :initiative%>
-    <%=  f.label :traits%>
-    <%=  f.text_field :traits%>
-    <%= f.submit%>
-    <%end%>
+<div>
+<h3>Gender: <%= @character.gender%> </h3>
+<h3>Race: <%=@race.name%></h3>
+<h3>Class: <%=@job.name%></h3>
+<h3>Intelligence: <%= @character.int%></h3>
+<h3>Strength: <%= @character.str%></h3>
+<h3>Dexterity: <%= @character.dex%></h3>
+<h3>Wisdom: <%= @character.wis%></h3>
+<h3>Charisma: <%= @character.cha%></h3>
+<h3>Constitution: <%= @character.con%></h3>
+<h3>Hit Points: <%= @character.hp%></h3>
+<h3>Armor Class: <%= @character.ac%></h3>
+<h3>Initiative: <%= @character.initiative%></h3>
+
+</div>
+
+<div>
+<h3>Equipment: <%= @character.equipment%></h3>
+<h3>Alignment: <%= @character.alignment%></h3>
+<h3>Size: <%= @character.size%></h3>
+<h3>Languages: <%= @character.languages%></h3>
+<h3>Saving Throws: <%= @character.saving_throws%></h3>
+<%@character.spells.each do |spell|%>
+<h3><%= link_to spell.name, spell_path(spell)%></h3><br>
+<%end%>
+</div>
+
+
+
+
+
+
+
+
+
+<%=button_to "Characters", characters_path, method: :get%>
+<%=button_to "Edit Character", edit_character_path(@character), method: :get%>
+<%=button_to "New character", new_character_path%>
+<%= button_to "Destroy character", character_path(@character), method: :delete%>
+
+
+

@@ -8,12 +8,6 @@ class CreateCharacters < ActiveRecord::Migration[6.0]
       t.integer :wis
       t.integer :cha
       t.integer :con
-      t.integer :int_mod
-      t.integer :str_mod
-      t.integer :dex_mod
-      t.integer :wis_mod
-      t.integer :cha_mod
-      t.integer :con_mod
       t.integer :hp
       t.text :equipment
       t.integer :ac
@@ -23,11 +17,10 @@ class CreateCharacters < ActiveRecord::Migration[6.0]
       t.text :saving_throws
       t.string :name
       t.integer :initiative
-      t.text :traits
       t.integer :user_id
       t.integer :race_id
       t.integer :job_id
-      t.integer :background_id
+
 
       t.timestamps
     end

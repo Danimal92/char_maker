@@ -12,15 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2019_10_24_054506) do
 
-  create_table "backgrounds", force: :cascade do |t|
-    t.string "personality"
-    t.string "ideals"
-    t.string "bonds"
-    t.string "flaws"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "characters", force: :cascade do |t|
     t.string "gender"
     t.integer "int"
@@ -29,12 +20,6 @@ ActiveRecord::Schema.define(version: 2019_10_24_054506) do
     t.integer "wis"
     t.integer "cha"
     t.integer "con"
-    t.integer "int_mod"
-    t.integer "str_mod"
-    t.integer "dex_mod"
-    t.integer "wis_mod"
-    t.integer "cha_mod"
-    t.integer "con_mod"
     t.integer "hp"
     t.text "equipment"
     t.integer "ac"
@@ -44,11 +29,9 @@ ActiveRecord::Schema.define(version: 2019_10_24_054506) do
     t.text "saving_throws"
     t.string "name"
     t.integer "initiative"
-    t.text "traits"
     t.integer "user_id"
     t.integer "race_id"
     t.integer "job_id"
-    t.integer "background_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

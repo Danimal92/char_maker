@@ -1,11 +1,41 @@
-<h1>Please choose from the following: </h1>
+<h1>Edit Character</h1>
+<h2><%=flash[:message] %></h2>
   <%= form_for(@character) do |f| %>
   <%= f.label :name%>
   <%= f.text_field :name%>
   <%= f.label :gender%>
   <%= f.select :gender, ['male', 'female']%>
-  <%= f.select :alignment, ['Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'True Neutral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil']%>
   <%= f.collection_select :race_id, Race.all, :id, :name %>
   <%= f.collection_select :job_id, Job.all, :id, :name %>
+  <%= f.select :alignment, ['Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'True Neutral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil']%>
+  <%= f.label :int%>
+  <%= f.number_field :int%>
+  <%= f.label :str%>
+  <%= f.number_field :str%>
+  <%= f.label :dex%>           
+  <%= f.number_field :dex%>
+  <%= f.label :wis%>
+  <%= f.number_field :wis%>
+  <%= f.label :cha%>
+  <%= f.number_field :cha%>
+  <%= f.label :con%>
+  <%= f.number_field :con%>
+  <%= f.label :hp%>
+  <%= f.number_field :hp%>
+  <%= f.label :ac%>
+  <%= f.number_field :ac%>
+  <%= f.label :initiative%>
+  <%= f.number_field :initiative%>
+  <%= f.label :equipment%>
+  <%= f.text_field :equipment%>
+  <%= f.label :size%>
+  <%= f.text_field :size%>
+  <%= f.label :languages%>
+  <%= f.text_field :languages%>
+  <%= f.label :saving_throws%>
+  <%= f.collection_select :spell_ids, Spell.all, :id, :name %>
+  <%= f.collection_select :skill_ids, Skill.all, :id, :name %>
   <%= f.submit %>
 <% end %>
+
+<%= button_to "Characters", characters_path%>

@@ -3,3 +3,11 @@
 <% @characters.each do |character|%>
 <h2><%= link_to character.name, character_path(character)%></h2>
 <%end%>
+
+<%=button_to "New character", new_character_path, method: :get%>
+<%=button_to "Races", races_path, method: :get%>
+<%=button_to "Jobs", jobs_path, method: :get%>
+<%=button_to "Spells", spells_path, method: :get%>
+<%=button_to "Skills", skills_path, method: :get%>
+
+

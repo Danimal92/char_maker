@@ -23,7 +23,7 @@ Race.make_all_races
 Skill.make_all_skills
 Spell.make_all_spells
 
-
+User.create(name: "Dan")
 
 
 

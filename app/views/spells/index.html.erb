@@ -1,2 +1,4 @@
-<h1>Spells#index</h1>
-<p>Find me in app/views/spells/index.html.erb</p>
+<h1>Spells</h1>
+<h2><%=@spells.each do |spell|%></h2>
+<h3><%=link_to spell.name, spell_path(spell)%></h3>
+<%end%>
