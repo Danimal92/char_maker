@@ -10,13 +10,13 @@ class_file = File.read('/Users/flatironschool/Desktop/My_Code/char_maker/lib/5e-
 race_file = File.read('/Users/flatironschool/Desktop/My_Code/char_maker/lib/5e-database/5e-SRD-Races.json')
 skill_file = File.read('/Users/flatironschool/Desktop/My_Code/char_maker/lib/5e-database/5e-SRD-Skills.json')
 spell_file = File.read('/Users/flatironschool/Desktop/My_Code/char_maker/lib/5e-database/5e-SRD-Spells.json')
-feature_file = File.read('/Users/flatironschool/Desktop/My_Code/char_maker/lib/5e-database/5e-SRD-Features.json')
+equipment_file = File.read('/Users/flatironschool/Desktop/My_Code/char_maker/lib/5e-database/5e-SRD-Equipment.json')
 
 class_hashes = JSON.parse(class_file)
 race_hashes = JSON.parse(race_file)
 skill_hashes = JSON.parse(skill_file)
 spell_hashes = JSON.parse(spell_file)
-feature_hashes = JSON.parse(feature_file)
+equipment_hashes = JSON.parse(equipment_file)
 
 Job.make_all_jobs
 Race.make_all_races

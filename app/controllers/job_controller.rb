@@ -1,18 +1,20 @@
 class JobController < ApplicationController
 
-  @class_file = File.read('/Users/flatironschool/Desktop/My_Code/char_maker/lib/5e-database/5e-SRD-Classes.json')
-  @class_hashes = JSON.parse(@class_file)
+
 
 
 
 
   def index
+    @jobs = Job.all
   end
 
   def show
+    @job = Job.find(params[:id])
   end
 
   def new
+    
   end
 
   def create

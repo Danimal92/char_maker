@@ -11,15 +11,6 @@ class Skill < ApplicationRecord
             ability_score = skill["ability_score"]["name"]
             desc = skill["desc"]
 
-            Skill.create(name: name, ability_score: ability_score, desc: desc)
-        
-        
-        
-        
-        
-        
-        }
-
+            Skill.create(name: name, ability_score: ability_score, desc: desc)}
     end
-
 end
