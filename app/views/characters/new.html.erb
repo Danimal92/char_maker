@@ -5,35 +5,53 @@
   <%= f.text_field :name%><br>
   <%= f.label :gender%><br>
   <%= f.select :gender, ['male', 'female']%><br>
+  <%= f.label :alignment%><br>
   <%= f.select :alignment, ['Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'True Neutral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil']%><br>
+  <%= f.label "Race"%><br>
   <%= f.collection_select :race_id, Race.all, :id, :name %><br>
+  <%= f.label "Class"%><br>
   <%= f.collection_select :job_id, Job.all, :id, :name %><br>
-  <%= f.label :int%><br>
-  <%= f.number_field :int%><br>
-  <%= f.label :str%><br>
-  <%= f.number_field :str%><br>
-  <%= f.label :dex%>           <br>
-  <%= f.number_field :dex%><br>
-  <%= f.label :wis%><br>
-  <%= f.number_field :wis%><br>
-  <%= f.label :cha%><br>
-  <%= f.number_field :cha%><br>
-  <%= f.label :con%><br>
-  <%= f.number_field :con%><br>
-  <%= f.label :hp%><br>
-  <%= f.number_field :hp%><br>
-  <%= f.label :ac%><br>
-  <%= f.number_field :ac%><br>
-  <%= f.label :initiative%><br>
-  <%= f.number_field :initiative%><br>
-  <%= f.label :equipment%><br>
-  <%= f.text_field :equipment%><br>
-  <%= f.label :size%><br>
-  <%= f.text_field :size%><br>
-  <%= f.label :languages%><br>
-  <%= f.text_field :languages%><br>
-  <%= f.label :saving_throws%><br>
+  <h5>Choose a number greater than 8</h5>
+  <%= f.label :int%>
+  <%= f.number_field :int%><h5>Choose a number greater than 8</h5>
+  <%= f.label :str%>
+  <%= f.number_field :str%><h5>Choose a number greater than 8</h5>
+  <%= f.label :dex%>
+  <%= f.number_field :dex%><h5>Choose a number greater than 8</h5>
+  <%= f.label :wis%>
+  <%= f.number_field :wis%><h5>Choose a number greater than 8</h5>
+  <%= f.label :cha%>
+  <%= f.number_field :cha%><h5>Choose a number greater than 8</h5>
+  <%= f.label :con%>
+  <%= f.number_field :con%>
+  <br>
+  <p>-----------------------------</p>
+  <br>
+  <%= f.label :hp%>
+  <%= f.number_field :hp%>
+  <br>
+  <%= f.label :ac%>
+  <%= f.number_field :ac%>
+  <br>
+  <%= f.label :initiative%>
+  <%= f.number_field :initiative%>
+  <br>
+  <%= f.label :equipment%>
+  <%= f.text_field :equipment%>
+  <br>
+  <%= f.label :size%>
+  <%= f.text_field :size%>
+  <br>
+  <%= f.label :languages%>
+  <%= f.text_field :languages%>
+  <br>
+  <%= f.label :saving_throws%>
+  <%= f.text_field :saving_throws%>
+  <br>
+  <h3>Choose your Spell!</h3><br>
   <%= f.collection_select :spell_ids, Spell.all, :id, :name %><br>
+
+  <h3>Now choose your Skill!</h3>
   <%= f.collection_select :skill_ids, Skill.all, :id, :name %><br>
   <%= f.submit %>
 <% end %>

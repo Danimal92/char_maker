@@ -1,12 +1,18 @@
 # README
 This is a character sheet generator for D&D5eSRD, made for use with new players. Made with Ruby on Rails.
+Start up the rails server and head to localhost:3000 to get started.
+Create a character, choose, race, class, scores, physical appearance, skills and spells!
+You can edit these as well.
+Destroying a character removes the join
+Links provided for race, spells, and skills
+
+
 
 
 
 
 
 # Ability Scores
-Only 27 points to spend, scores cannot be lower than 8 or greater than 15
     - Strength
     - Dexterity
     - Constitution
@@ -27,8 +33,8 @@ Proficiency bonuses to saving throws and skills will increase them by 2
 # Choose Class
 Choose class from dropdown
 Add saving throws bonuses 
-Add proficiency bonuses to skills
-Add skills
+
+
 
 
 

@@ -40,7 +40,7 @@
 
 <%=button_to "Characters", characters_path, method: :get%>
 <%=button_to "Edit Character", edit_character_path(@character), method: :get%>
-<%=button_to "New character", new_character_path%>
+<%=button_to "New character", new_character_path(Character.new), method: :get%>
 <%= button_to "Destroy character", character_path(@character), method: :delete%>
 
 

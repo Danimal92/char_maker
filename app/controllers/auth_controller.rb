@@ -1,5 +1,9 @@
 class AuthController < ApplicationController
+
+
+
   def signin
+
   end
 
   def verify
@@ -18,4 +22,15 @@ class AuthController < ApplicationController
       session.clear
       redirect_to login_path
   end
+
+  def new
+    @user = User.new
+end
+
+def create
+    
+    @user = User.new
+    @user.name = params[:user][:name]
+    redirect_to login_path
+end
 end

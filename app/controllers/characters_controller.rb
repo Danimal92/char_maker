@@ -67,7 +67,10 @@ class CharactersController < ApplicationController
 
   def destroy
     @character = Character.find(params[:id])
+    
     if @character.destroy
+      @character.spells.delete
+      @character.skills.delete
       redirect_to characters_path
     end
   end
