@@ -20,27 +20,6 @@ class CharactersController < ApplicationController
   def create
     @character = Character.new(character_params)
     @character.user_id = 1
-    # @character.race_id = Race.find(params[:character][:job_id]).id
-    # @character.job_id = Job.find(params[:character][:job_id]).id
-    # character.int = 8
-    # @character.str = 8
-    # @character.dex = 8
-    # @character.wis = 8
-    # @character.cha = 8
-    # @character.con = 8
-    # @character.hp = Job.find(params[:character][:job_id]).hit_die.to_i
-    # @character.equipment = "Nothing at the moment"
-    # @character.ac = 0
-    # @character.size = Race.find(params[:character][:race_id]).size
-    # @character.languages = Race.find(params[:character][:race_id]).languages
-    # @character.saving_throws = Job.find(params[:character][:job_id]).saving_throw_profs
-    # @character.initiative = 0
-    
-    # @character.name = params[:character][:name]
-    # @character.alignment =  params[:character][:alignment]
-    # @character.gender = params[:character][:gender]
-    # @character = Character.new(character_params)
-    # byebug
     if @character.save
       
     
